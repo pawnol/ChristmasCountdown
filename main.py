@@ -21,15 +21,15 @@ def update_label():
     hours = timedelta_util.actual_hours(deltaT)
     minutes = timedelta_util.actual_minutes(deltaT)
     seconds = timedelta_util.actual_seconds(deltaT)
-    date_label.config(text="There are "+ str(days) + " days, "
-                      + str(hours) + " hours, "
-                      + str(minutes) + " minutes, \nand "
-                      + str(seconds) + " seconds till Christmas!")
+    date_label.config(text="There are "+ str(days) + " day(s), "
+                      + str(hours) + " hour(s), \n"
+                      + str(minutes) + " minute(s), and "
+                      + str(seconds) + " second(s) \ntill Christmas!")
     date_label.after(1000, update_label)
 
 window = tk.Tk()
 window.title("Christmas Countdown")
-window.geometry("900x825")
+window.geometry("900x850")
 window.iconbitmap("christmas_tree_icon.ico")
 
 tree_source = tk.PhotoImage(file="christmas_tree_picture.png")
